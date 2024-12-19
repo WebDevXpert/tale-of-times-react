@@ -18,7 +18,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       </button>
       <nav className="flex flex-col mt-10">
         <Link to="/" className="mx-5 text-blue-400 my-2">
-          Home
+          Homeeeeee
         </Link>
         <Link href="/" className="mx-5 hover:text-blue-400  my-2">
           Stock Market
