@@ -45,7 +45,7 @@ export default function Home() {
             <div className="flex flex-col">
               {article.image && (
                 <img
-                  src={`http://localhost:8000/${article.image}`}
+                  src={`${process.env.REACT_APP_BACKEND_URL}/${article.image}`}
                   alt={article.title}
                   className="w-32 h-32 object-cover mb-4"
                 />

@@ -22,7 +22,7 @@ export default function EditArticle() {
         setDescription(response.data.description);
         setCurrentImage(
           response.data.image
-            ? `http://localhost:8000/${response.data.image}`
+            ? `${process.env.REACT_APP_BACKEND_URL}/${response.data.image}`
             : ""
         );
         console.log("image", response.data.image);

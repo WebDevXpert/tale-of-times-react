@@ -43,7 +43,7 @@ const UpdatedNews = () => {
               onClick={() => navigate(`/blog/${article._id}`)}
             >
               <img
-                src={`http://localhost:8000/${article.image}`}
+                src={`${process.env.REACT_APP_BACKEND_URL}/${article.image}`}
                 alt={article.title}
                 className="w-full h-48 object-cover"
               />
