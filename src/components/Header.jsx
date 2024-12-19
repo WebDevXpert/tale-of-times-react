@@ -93,7 +93,7 @@ const Header = () => {
           {user?.user?.role === "admin" ? (
             <>
               <button onClick={() => handleScroll("home")} className="mx-5">
-                Homeeeee
+                Home
               </button>
               <button
                 onClick={() => handleScroll("stock-market")}
