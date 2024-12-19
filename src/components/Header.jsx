@@ -17,27 +17,30 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         ✕
       </button>
       <nav className="flex flex-col mt-10">
-        <Link to="/" className="mx-5 text-blue-400 my-2">
-          Homeeeeee
-        </Link>
-        <Link href="/" className="mx-5 hover:text-blue-400  my-2">
+        <button
+          onClick={() => handleScroll("home")}
+          className="mx-5 text-blue-400 my-2"
+        >
+          Home
+        </button>
+        <button
+          onClick={() => handleScroll("stock-market")}
+          className="mx-5 hover:text-blue-400  my-2"
+        >
           Stock Market
-        </Link>
-        <Link href="/" className="mx-5 hover:text-blue-400 my-2">
+        </button>
+        <button
+          onClick={() => handleScroll("technology")}
+          className="mx-5 hover:text-blue-400 my-2"
+        >
           Technology
-        </Link>
-        <Link href="/" className="mx-5 hover:text-blue-400 my-2">
+        </button>
+        <button
+          onClick={() => handleScroll("politics")}
+          className="mx-5 hover:text-blue-400 my-2"
+        >
           Politics
-        </Link>
-        <Link href="/" className="mx-5 hover:text-blue-400 my-2">
-          Automobile
-        </Link>
-        <Link href="/" className="mx-5 hover:text-blue-400 my-2">
-          Health
-        </Link>
-        <Link href="/" className="mx-5 hover:text-blue-400 my-2">
-          Interactive Sessions
-        </Link>
+        </button>
       </nav>
     </div>
   );
@@ -90,7 +93,7 @@ const Header = () => {
           {user?.user?.role === "admin" ? (
             <>
               <button onClick={() => handleScroll("home")} className="mx-5">
-                Home
+                Homeeeee
               </button>
               <button
                 onClick={() => handleScroll("stock-market")}
