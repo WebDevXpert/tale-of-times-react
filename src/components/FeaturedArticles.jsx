@@ -32,7 +32,7 @@ const FeaturedArticles = () => {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center my-10">
+    <div id="home" className="flex flex-wrap justify-center my-10">
       {/* Main Featured Article */}
       <div className="w-full  relative md:w-1/2 lg:w-[44.333333%] ">
         <div className="-z-10 relative">

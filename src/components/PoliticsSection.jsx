@@ -29,7 +29,7 @@ const PoliticsSection = () => {
   ];
 
   return (
-    <div className="container w-[80%] mx-auto px-4 py-8">
+    <div id="politics" className="container w-[80%] mx-auto px-4 py-8">
       <div className="flex items-center justify-between mt-8">
         <h1 className="text-4xl font-bold  mb-8">Politics</h1>
       </div>

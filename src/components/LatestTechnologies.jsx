@@ -2,7 +2,7 @@ import React from "react";
 
 const LatestTechnology = () => {
   return (
-    <div className="container w-[80%] mx-auto">
+    <div id="technology" className="container w-[80%] mx-auto">
       <div className="flex items-center justify-between mt-8">
         <h1 className="text-4xl font-bold  mb-8">Technology</h1>
       </div>

@@ -2,7 +2,6 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import { IoMdEyeOff, IoMdEye } from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom";
-import customFetch from "../utils/axios.js";
 import { useAuth } from "../context/AuthContext.js";
 import axios from "axios";
 
@@ -40,7 +39,7 @@ export default function Login() {
   return (
     <>
       <form onSubmit={submitHandler}>
-        <section className="text-gray-600 body-font relative bg-[#f2f0f0] w-1/3 my-8 mx-auto rounded-lg">
+        <section className="text-gray-600 body-font relative bg-[#f2f0f0] sm:w-1/3 my-8 sm:mx-auto mx-4 rounded-lg">
           <div className="container px-5 py-8 mx-auto">
             <div className="flex flex-col w-full mb-12">
               <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">

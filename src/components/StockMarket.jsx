@@ -27,7 +27,7 @@ const StockMarket = () => {
   ];
 
   return (
-    <div className="container w-[80%] mx-auto px-4 py-8">
+    <div id="stock-market" className="container w-[80%] mx-auto px-4 py-8">
       <div className=" flex justify-between items-center mt-8">
         <h1 className="text-4xl font-bold  mb-8">Stock Market</h1>
       </div>

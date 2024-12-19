@@ -1,8 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import {
+  FaBiohazard,
+  FaCheese,
+  FaFacebook,
+  FaInstagram,
+  FaMagnet,
+  FaSnapchat,
+  FaTiktok,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa";
 
 const DropDown = ({ isOpen, toggleDropdown }) => {
+  // Function to handle smooth scrolling
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="relative inline-block text-left">
       <button
@@ -14,48 +31,30 @@ const DropDown = ({ isOpen, toggleDropdown }) => {
 
       {isOpen && (
         <nav className="absolute mt-2 right-1 z-10 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-          <Link
-            to="/"
+          <button
+            onClick={() => handleScroll("home")}
             className="block px-4 py-2 text-gray-700 hover:bg-blue-500 hover:text-white"
           >
             Home
-          </Link>
-          <Link
-            to="/"
+          </button>
+          <button
+            onClick={() => handleScroll("stock-market")}
             className="block px-4 py-2 text-gray-700 hover:bg-blue-500 hover:text-white"
           >
             Stock Market
-          </Link>
-          <Link
-            to="/"
+          </button>
+          <button
+            onClick={() => handleScroll("technology")}
             className="block px-4 py-2 text-gray-700 hover:bg-blue-500 hover:text-white"
           >
             Technology
-          </Link>
-          <Link
-            to="/"
+          </button>
+          <button
+            onClick={() => handleScroll("politics")}
             className="block px-4 py-2 text-gray-700 hover:bg-blue-500 hover:text-white"
           >
             Politics
-          </Link>
-          <Link
-            to="/"
-            className="block px-4 py-2 text-gray-700 hover:bg-blue-500 hover:text-white"
-          >
-            Automobile
-          </Link>
-          <Link
-            to="/"
-            className="block px-4 py-2 text-gray-700 hover:bg-blue-500 hover:text-white"
-          >
-            Health
-          </Link>
-          <Link
-            to="/"
-            className="block px-4 py-2 text-gray-700 hover:bg-blue-500 hover:text-white"
-          >
-            Interactive Sessions
-          </Link>
+          </button>
         </nav>
       )}
     </div>
@@ -72,6 +71,14 @@ const Footer = () => {
 
   const handleResize = () => {
     setIsMobile(window.innerWidth < 1262); // Change this value based on your design breakpoint
+  };
+
+  // Function to handle smooth scrolling
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   useEffect(() => {
@@ -91,30 +98,30 @@ const Footer = () => {
             <DropDown isOpen={isOpen} toggleDropdown={toggleDropdown} />
           ) : (
             <div className="flex justify-center p-4">
-              <Link to="/" className="mx-5 text-blue-500 hover:text-black">
-                Home
-              </Link>
-              <Link to="/" className="mx-5 text-blue-500 hover:text-black">
-                Stock Market
-              </Link>
-              <Link to="/" className="mx-5 text-blue-500 hover:text-black">
-                Technology
-              </Link>
-              <Link to="/" className="mx-5 text-blue-500 hover:text-black">
-                Politics
-              </Link>
-              <Link to="/" className="mx-5 text-blue-500 hover:text-black">
-                Automobile
-              </Link>
-              <Link to="/" className="mx-5 text-blue-500 hover:text-black">
-                Health
-              </Link>
-              <Link
-                to="/"
-                className="mr-10 ml-3 text-blue-500 hover:text-black"
+              <button
+                onClick={() => handleScroll("home")}
+                className="mx-5 text-blue-500 hover:text-black"
               >
-                Interactive Sessions
-              </Link>
+                Home
+              </button>
+              <button
+                onClick={() => handleScroll("stock-market")}
+                className="mx-5 text-blue-500 hover:text-black"
+              >
+                Stock Market
+              </button>
+              <button
+                onClick={() => handleScroll("technology")}
+                className="mx-5 text-blue-500 hover:text-black"
+              >
+                Technology
+              </button>
+              <button
+                onClick={() => handleScroll("politics")}
+                className="mx-5 text-blue-500 hover:text-black"
+              >
+                Politics
+              </button>
             </div>
           )}
         </div>
@@ -124,50 +131,21 @@ const Footer = () => {
             <h1 className="text-lg font-bold mb-4">About</h1>
             <p className="text-sm">Your Daily Dose of Inspiration.</p>
           </div>
-
-          <div className="company">
-            <p className="text-lg font-bold mb-4">Company</p>
-            <div>
-              <Link to="/" className="block hover:text-blue-400 my-2">
-                About Us
-              </Link>
-              <Link to="/" className="block hover:text-blue-400 my-2">
-                Contact Us
-              </Link>
-              <Link to="/" className="block hover:text-blue-400 my-2">
-                Our Staff
-              </Link>
-              <Link to="/" className="block hover:text-blue-400 my-2">
-                Advertise
-              </Link>
-            </div>
-          </div>
-
-          <div className="company">
-            <p className="text-lg font-bold mb-4">Legal</p>
-            <div>
-              <Link to="/" className="block hover:text-blue-400 my-2">
-                Privacy Policy
-              </Link>
-              <Link to="/" className="block hover:text-blue-400 my-2">
-                Terms of Service
-              </Link>
-              <Link to="/" className="block hover:text-blue-400 my-2">
-                Extra Crunch Terms
-              </Link>
-              <Link to="/" className="block hover:text-blue-400 my-2">
-                Code of Conduct
-              </Link>
-            </div>
-          </div>
-
           <div className="company">
             <p className="text-lg font-bold mb-4">Follow Us</p>
             <div>
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://youtube.com/@talesoftime02?si=msPORngoDTuvUGd7"
+                href="https://bit.ly/3Daqhbj"
+                className="hover:text-blue-400 my-2 flex items-center gap-2"
+              >
+                <FaWhatsapp /> WhatsApp
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://bit.ly/3ANQ1JF"
                 className="hover:text-blue-400 my-2 flex items-center gap-2"
               >
                 <FaFacebook /> Facebook
@@ -175,19 +153,95 @@ const Footer = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://youtube.com/@talesoftime02?si=msPORngoDTuvUGd7"
-                className="hover:text-blue-400 my-2 flex items-center gap-2"
-              >
-                <FaYoutube /> Youtube
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.instagram.com/taleoftime02/profilecard/?igsh=MWZoZ2h6bjQwMGx4YQ=="
+                href="https://bit.ly/40QCvQ1"
                 className="hover:text-blue-400 my-2 flex items-center gap-2"
               >
                 <FaInstagram /> Instagram
               </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://bit.ly/3YVRDc6"
+                className="hover:text-blue-400 my-2 flex items-center gap-2"
+              >
+                <FaYoutube /> Youtube
+              </a>
+            </div>
+          </div>
+
+          <div className="company">
+            <p className="text-lg font-bold mb-4">Company</p>
+            <div>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://bit.ly/40Wk9NL"
+                className="hover:text-blue-400 my-2 flex items-center gap-2"
+              >
+                <FaSnapchat /> SnapChat
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://bit.ly/4g6438Y"
+                className="hover:text-blue-400 my-2 flex items-center gap-2"
+              >
+                <FaCheese /> Jaco Video
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://bit.ly/49y2Cxw"
+                className="hover:text-blue-400 my-2 flex items-center gap-2"
+              >
+                <FaBiohazard /> Bigo Live
+              </a>
+              {/* <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://bit.ly/4g6438Y"
+                className="hover:text-blue-400 my-2 flex items-center gap-2"
+              >
+                <FaCheese /> Cheele Video
+              </a> */}
+            </div>
+          </div>
+
+          <div className="company">
+            <p className="text-lg font-bold mb-4">Legal</p>
+            <div>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://bit.ly/4eYRx9I"
+                className="hover:text-blue-400 my-2 flex items-center gap-2"
+              >
+                <FaTiktok /> TikTok
+              </a>
+              {/* <a
+                target="_blank"
+                rel="noreferrer"
+                href="/"
+                className="hover:text-blue-400 my-2 flex items-center gap-2"
+              >
+                <FaSnapchat /> Snack Video
+              </a> */}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://bit.ly/3CTRejl"
+                className="hover:text-blue-400 my-2 flex items-center gap-2"
+              >
+                <FaMagnet /> Mate Live
+              </a>
+              {/* <a
+                target="_blank"
+                rel="noreferrer"
+                href="/"
+                className="hover:text-blue-400 my-2 flex items-center gap-2"
+              >
+                <FaTwitter /> Threads
+              </a> */}
             </div>
           </div>
         </div>
