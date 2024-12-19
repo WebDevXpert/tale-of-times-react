@@ -35,15 +35,37 @@ const UpdatedNews = () => {
           <p>Loading articles...</p>
         ) : (
           articles.map((article, index) => (
+            // <div
+            //   key={article._id}
+            //   className="rounded-lg overflow-hidden cursor-pointer"
+            //   onClick={() => navigate(`/blog/${article._id}`)}
+            // >
+            //   <img
+            //     src={`${process.env.REACT_APP_BACKEND_URL}/${article.image}`}
+            //     alt={article.title}
+            //     className="w-full h-48 object-cover"
+            //   />
+            //   <div className="p-4">
+            //     <h2 className="text-xl font-semibold">{article.title}</h2>
+            //     <p className="text-gray-600">
+            //       {article.author} |{" "}
+            //       {new Date(article.createdAt).toLocaleDateString()}
+            //     </p>
+            //     <p className="text-gray-800 mt-2">
+            //       {article?.description &&
+            //         article?.description.substring(0, 200)}
+            //     </p>
+            //   </div>
+            // </div>
             <div
               key={article._id}
-              className="rounded-lg overflow-hidden cursor-pointer"
-              onClick={() => navigate(`/blog/${article._id}`)}
+              className="relative rounded-lg overflow-hidden cursor-pointer group"
+              // onClick={() => navigate(`/blog/${article._id}`)}
             >
               <img
                 src={`${process.env.REACT_APP_BACKEND_URL}/${article.image}`}
                 alt={article.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="p-4">
                 <h2 className="text-xl font-semibold">{article.title}</h2>
@@ -55,6 +77,19 @@ const UpdatedNews = () => {
                   {article?.description &&
                     article?.description.substring(0, 200)}
                 </p>
+              </div>
+
+              {/* Overlay and Button */}
+              <div className="absolute inset-0 bg-[#827c7c] bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigate(`/blog/${article._id}`);
+                  }}
+                  className="px-4 py-2 text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700"
+                >
+                  Details
+                </button>
               </div>
             </div>
           ))

@@ -40,14 +40,14 @@ export default function Login() {
   return (
     <>
       <form onSubmit={submitHandler}>
-        <section className="text-gray-600 body-font relative">
-          <div className="container px-5 py-24 mx-auto">
-            <div className="flex flex-col text-center w-full mb-12">
+        <section className="text-gray-600 body-font relative bg-[#f2f0f0] w-1/3 my-8 mx-auto rounded-lg">
+          <div className="container px-5 py-8 mx-auto">
+            <div className="flex flex-col w-full mb-12">
               <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
                 Login
               </h1>
             </div>
-            <div className="w-1/3 mx-auto">
+            <div className=" mx-auto">
               <div className="flex justify-center flex-wrap -m-2">
                 <div className="fields w-full">
                   <div className="p-2 w-full">
