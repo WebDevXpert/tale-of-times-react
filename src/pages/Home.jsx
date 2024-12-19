@@ -20,8 +20,8 @@ function Home() {
       <StockMarket />
       <LatestTechnology />
       <PoliticsSection />
-      <ArticleGrid />
-      <GuestPost />
+      {/* <ArticleGrid /> */}
+      {/* <GuestPost /> */}
       <MergedComponent />
     </div>
   );

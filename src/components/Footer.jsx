@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const DropDown = ({ isOpen, toggleDropdown }) => {
   return (
@@ -167,17 +168,25 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
                 href="https://youtube.com/@talesoftime02?si=msPORngoDTuvUGd7"
-                className="block hover:text-blue-400 my-2"
+                className="hover:text-blue-400 my-2 flex items-center gap-2"
               >
-                Youtube
+                <FaFacebook /> Facebook
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://youtube.com/@talesoftime02?si=msPORngoDTuvUGd7"
+                className="hover:text-blue-400 my-2 flex items-center gap-2"
+              >
+                <FaYoutube /> Youtube
               </a>
               <a
                 target="_blank"
                 rel="noreferrer"
                 href="https://www.instagram.com/taleoftime02/profilecard/?igsh=MWZoZ2h6bjQwMGx4YQ=="
-                className="block hover:text-blue-400 my-2"
+                className="hover:text-blue-400 my-2 flex items-center gap-2"
               >
-                Instagram
+                <FaInstagram /> Instagram
               </a>
             </div>
           </div>

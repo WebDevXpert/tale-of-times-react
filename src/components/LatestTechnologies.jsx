@@ -5,9 +5,6 @@ const LatestTechnology = () => {
     <div className="container w-[80%] mx-auto">
       <div className="flex items-center justify-between mt-8">
         <h1 className="text-4xl font-bold  mb-8">Technology</h1>
-        <a href="#" className="text-black hover:text-blue-700 font-semibold">
-          View All →
-        </a>
       </div>
       <div className="flex flex-wrap gap-4">
         <div className="w-full relative -z-10 md:w-1/2 lg:w-[49.333333%]">

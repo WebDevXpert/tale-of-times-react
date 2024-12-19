@@ -1,5 +1,3 @@
-import React from "react";
-
 const StockMarket = () => {
   const articles = [
     {
@@ -32,9 +30,6 @@ const StockMarket = () => {
     <div className="container w-[80%] mx-auto px-4 py-8">
       <div className=" flex justify-between items-center mt-8">
         <h1 className="text-4xl font-bold  mb-8">Stock Market</h1>
-        <a href="#" className="text-black hover:text-blue-700 font-semibold">
-          View All →
-        </a>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

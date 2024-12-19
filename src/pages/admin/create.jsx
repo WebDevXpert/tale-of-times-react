@@ -30,7 +30,7 @@ export default function CreateArticle() {
         },
       });
       toast.success("Article created successfully");
-      navigate("/admin");
+      navigate("/admin/blogs");
     } catch (error) {
       console.error("Error creating article:", error);
     }

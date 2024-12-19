@@ -101,6 +101,27 @@ const Header = () => {
         <div className="flex justify-center p-4">
           {user?.user?.role === "admin" ? (
             <>
+              <Link to="/" className="mx-5">
+                Home
+              </Link>
+              <Link to="/stock-market" className="mx-5">
+                Stock Market
+              </Link>
+              <Link to="/technology" className="mx-5">
+                Technology
+              </Link>
+              <Link to="/politics" className="mx-5">
+                Politics
+              </Link>
+              <Link to="/automobile" className="mx-5">
+                Automobile
+              </Link>
+              <Link to="/health" className="mx-5">
+                Health
+              </Link>
+              <Link to="/interactive-sessions" className="mr-10 ml-3">
+                Interactive Sessions
+              </Link>
               <Link to="/admin/blogs" className="mx-5">
                 Blogs
               </Link>
@@ -128,6 +149,11 @@ const Header = () => {
               <Link to="/interactive-sessions" className="mr-10 ml-3">
                 Interactive Sessions
               </Link>
+              {user?.user && (
+                <Link to="/admin/blogs" className="mr-10 ml-3">
+                  Blogs
+                </Link>
+              )}
             </>
           )}
         </div>

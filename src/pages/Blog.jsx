@@ -16,13 +16,13 @@ function Blog() {
     fetchBlog();
   }, []);
   return (
-    <div className="flex flex-col justify-center w-2/3 mx-auto">
+    <div className="flex flex-col justify-center gap-2 w-2/3 mx-auto">
       <img
         src={`${process.env.REACT_APP_BACKEND_URL}/${blog.image}`}
-        alt=""
-        className="w-full"
+        alt="article"
+        className="w-full h-[50vh]"
       />
-      <h1>{blog.title}</h1>
+      <h1 className="text-2xl font-semibold">{blog.title}</h1>
       <p>{blog.description}</p>
     </div>
   );
