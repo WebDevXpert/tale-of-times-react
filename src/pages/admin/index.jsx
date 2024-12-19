@@ -16,7 +16,8 @@ export default function Home() {
         const response = await customFetch.get("/api/articles", {
           params: { search, sort, page },
         });
-        setArticles(response.data.articles);
+        // setArticles(response.data.articles);
+        setArticles(response.data);
         setNumOfPages(response.data.numOfPages);
         console.log("response", response);
       } catch (error) {
