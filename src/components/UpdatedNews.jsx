@@ -24,6 +24,7 @@ const UpdatedNews = () => {
         );
         setArticles(response.data.articles);
         setNumOfPages(response.data.numOfPages);
+        console.log("response", response);
       } catch (error) {
         console.error("Error fetching articles:", error);
       } finally {
