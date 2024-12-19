@@ -79,20 +79,20 @@ export default function Home() {
       </div>
 
       <div className="grid gap-4">
-        {articles.map((article) => (
+        {articles?.map((article) => (
           <div
             key={article._id}
             className="p-4 border rounded-lg shadow-md flex justify-between items-center"
           >
             <div className="flex flex-col">
-              {article.image && (
+              {article?.image && (
                 <img
-                  src={`${process.env.REACT_APP_BACKEND_URL}/${article.image}`}
+                  src={`${process.env.REACT_APP_BACKEND_URL}/${article?.image}`}
                   alt={article.title}
                   className="w-32 h-32 object-cover mb-4"
                 />
               )}
-              <h2 className="text-xl font-semibold">{article.title}</h2>
+              <h2 className="text-xl font-semibold">{article?.title}</h2>
               <p>{article?.description?.substring(0, 200)}</p>
               <p className="text-sm text-gray-500">
                 {article.content.slice(0, 100)}...
@@ -100,13 +100,13 @@ export default function Home() {
             </div>
             <div className="flex gap-2">
               <Link
-                to={`/admin/blog/edit/${article._id}`}
+                to={`/admin/blog/edit/${article?._id}`}
                 className="px-3 py-1 bg-blue-500 text-white rounded"
               >
                 Edit
               </Link>
               <button
-                onClick={() => deleteArticle(article._id)}
+                onClick={() => deleteArticle(article?._id)}
                 className="px-3 py-1 bg-red-500 text-white rounded"
               >
                 Delete
