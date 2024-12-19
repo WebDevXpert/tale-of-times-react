@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import customFetch from "../../utils/axios";
+import { toast } from "react-toastify";
 
 export default function CreateArticle() {
   const navigate = useNavigate();
@@ -28,6 +29,7 @@ export default function CreateArticle() {
           "Content-Type": "multipart/form-data",
         },
       });
+      toast.success("Article created successfully");
       navigate("/admin");
     } catch (error) {
       console.error("Error creating article:", error);

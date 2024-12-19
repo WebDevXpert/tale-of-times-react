@@ -14,7 +14,6 @@ export const AuthProvider = ({ children }) => {
 
   // Login function: Add user to context and localStorage
   const login = (userData) => {
-    console.log("loggin in user", userData);
     setUser(userData);
     addUserToLocalStorage(userData);
   };

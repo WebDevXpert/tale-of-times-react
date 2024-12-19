@@ -18,7 +18,6 @@ export default function Login() {
     const name = e.target.name;
     const value = e.target.value;
     setUserData({ ...userData, [name]: value });
-    console.log(name, value);
   };
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -32,7 +31,7 @@ export default function Login() {
       // console.log("data", data);
       // addUserToLocalStorage(data.data);
       login(data.data);
-      navigate("/admin");
+      navigate("/admin/blogs");
     } catch (error) {
       console.log("Error", error.response.data.msg);
       toast.error(error.response.data.msg);

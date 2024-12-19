@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import customFetch from "../utils/axios";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -14,7 +13,6 @@ const UpdatedNews = () => {
           `${process.env.REACT_APP_BACKEND_URL}/api/articles`
         );
         setArticles(response.data);
-        console.log("response", response);
       } catch (error) {
         console.error("Error fetching articles:", error);
       }
@@ -38,7 +36,7 @@ const UpdatedNews = () => {
         ) : (
           articles.map((article, index) => (
             <div
-              key={index}
+              key={article._id}
               className="rounded-lg overflow-hidden cursor-pointer"
               onClick={() => navigate(`/blog/${article._id}`)}
             >
@@ -48,15 +46,15 @@ const UpdatedNews = () => {
                 className="w-full h-48 object-cover"
               />
               <div className="p-4">
-                <a href="" className="text-blue-600 text-sm">
-                  Stock Market
-                </a>
                 <h2 className="text-xl font-semibold">{article.title}</h2>
                 <p className="text-gray-600">
                   {article.author} |{" "}
                   {new Date(article.createdAt).toLocaleDateString()}
                 </p>
-                <p className="text-gray-800 mt-2">{article.description}</p>
+                <p className="text-gray-800 mt-2">
+                  {article?.description &&
+                    article?.description.substring(0, 200)}
+                </p>
               </div>
             </div>
           ))

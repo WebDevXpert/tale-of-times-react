@@ -10,7 +10,7 @@ root.render(
   <React.StrictMode>
     <AuthProvider>
       <App />
-      <ToastContainer />
+      <ToastContainer position="bottom-right" />
     </AuthProvider>
   </React.StrictMode>
 );
