@@ -78,7 +78,7 @@ const UpdatedNews = () => {
         ) : articles?.length === 0 ? (
           <p>No articles found.</p>
         ) : (
-          articles.map((article) => (
+          articles?.map((article) => (
             <div
               key={article._id}
               className="relative rounded-lg overflow-hidden cursor-pointer group"
