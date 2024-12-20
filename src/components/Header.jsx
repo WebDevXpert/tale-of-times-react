@@ -4,6 +4,14 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
+  // Function to handle smooth scrolling
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div
       className={`fixed top-0 left-0 h-full w-96 bg-slate-100 text-black transform ${
@@ -116,18 +124,24 @@ const Header = () => {
             </>
           ) : (
             <>
-              <Link to="/" className="mx-5">
+              <button onClick={() => handleScroll("home")} className="mx-5">
                 Home
-              </Link>
-              <Link to="/stock-market" className="mx-5">
+              </button>
+              <button
+                onClick={() => handleScroll("stock-market")}
+                className="mx-5"
+              >
                 Stock Market
-              </Link>
-              <Link to="/technology" className="mx-5">
+              </button>
+              <button
+                onClick={() => handleScroll("technology")}
+                className="mx-5"
+              >
                 Technology
-              </Link>
-              <Link to="/politics" className="mx-5">
+              </button>
+              <button onClick={() => handleScroll("politics")} className="mx-5">
                 Politics
-              </Link>
+              </button>
               {user?.user && (
                 <Link to="/admin/blogs" className="mr-10 ml-3">
                   Blogs
