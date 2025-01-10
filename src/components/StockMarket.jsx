@@ -33,7 +33,7 @@ const StockMarket = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {articles.map((article, index) => (
+        {articles?.map((article, index) => (
           <div key={index} className=" rounded-lg overflow-hidden ">
             <img
               src={article.image}

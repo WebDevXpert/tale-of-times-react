@@ -67,7 +67,7 @@ const MergedComponent = () => {
           </a>
         </div>
         <div className="space-y-8 mb-12">
-          {articles.map((article, index) => (
+          {articles?.map((article, index) => (
             <div
               key={index}
               className="flex flex-col md:flex-row items-start gap-6"

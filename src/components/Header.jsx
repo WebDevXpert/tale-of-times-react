@@ -86,14 +86,14 @@ const Header = () => {
           </Link>
           <div className="flex items-center gap-4">
             <p>{user?.user?.firstName}</p>
-            <button
+            {/* <button
               className="text-[15px] p-[5px] group hover:bg-black border-black border-[1px]"
               onClick={() => (user?.user ? logout() : navigate("/login"))}
             >
               <p className="group-hover:text-white font-bold">
                 {user?.user ? "Logout" : "Login"}
               </p>
-            </button>
+            </button> */}
           </div>
         </div>
 

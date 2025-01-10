@@ -22,8 +22,8 @@ const UpdatedNews = () => {
             params: { search, sort, page },
           }
         );
-        // setArticles(response.data.articles);
-        setArticles(response.data);
+        setArticles(response.data.articles);
+        // setArticles(response.data);
         setNumOfPages(response.data.numOfPages);
         console.log("response", response);
       } catch (error) {
